@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 with open('requirements.txt', 'r',  encoding='utf-8') as f:
-    requirements = [x for x in parse_requirements(f.read())]
+    requirements = [str(x) for x in parse_requirements(f.read())]
 
 setup(
     name='py3-utility',
