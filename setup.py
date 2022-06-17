@@ -1,9 +1,10 @@
 from setuptools import setup
-from pkg_resources import parse_requirements
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+with open('requirements.txt', 'r',  encoding='utf-8') as f:
+    requirements = [x for x in f.read()]
 setup(
     name='py3-utility',
     version='1.0',
@@ -13,5 +14,5 @@ setup(
     author='rdgl',
     author_email='',
     license="MIT",
-    install_requires=[x for x in parse_requirements('requirements.txt')]
+    install_requires=requirements
 )
