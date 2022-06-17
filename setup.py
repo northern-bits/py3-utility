@@ -13,5 +13,5 @@ setup(
     author='rdgl',
     author_email='',
     license="MIT",
-    install_requires=parse_requirements('requirements.txt')
+    install_requires=[x for x in parse_requirements('requirements.txt')]
 )
